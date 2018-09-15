@@ -1,5 +1,4 @@
-$(document).ready(function () {
-
+$(document).ready(function() {
   //calculate maintenance calories
   function calcCals(kg, pa, age, ht, gender) {
     if (gender == "male" || gender == "Male") {
@@ -53,8 +52,13 @@ $(document).ready(function () {
     return recommended;
   }
 
-  $("#update-submit").on("click", function (event) {
+  $("#update-submit").on("click", function(event) {
     event.preventDefault();
+    function showModal(modalTitle, modalBody) {
+      $("#modal-title").html(modalTitle);
+      $("#modal-body").html(modalBody);
+      $("#error-modal").modal("toggle");
+    }
 
     var goal = parseInt($(".goal:selected").val());
     var pa = parseFloat($(".pa:selected").attr("data-multiplier"));
@@ -67,12 +71,20 @@ $(document).ready(function () {
     var inches = parseFloat($("#inches").val());
     var ht = Math.round((feet * 12 + inches) * 2.54);
 
-    if ($(".goal:selected").val() === undefined || $(".pa:selected").val() === undefined) {
-      return alert("Please fill out all the forms");
+    if (
+      $(".goal:selected").val() === undefined ||
+      $(".pa:selected").val() === undefined
+    ) {
+      return showModal("Error:", "Please fill out all the forms");
     }
 
-    if ($("#age").val() === "" || $("#feet").val() === "" || $("#inches").val() === "" || $("#weight").val() === "") {
-      return alert("Please fill out all the forms");
+    if (
+      $("#age").val() === "" ||
+      $("#feet").val() === "" ||
+      $("#inches").val() === "" ||
+      $("#weight").val() === ""
+    ) {
+      return showModal("Error:", "Please fill out all the forms");
     }
 
     var maintenanceCals = calcCals(kg, pa, age, ht, gender);
@@ -96,10 +108,9 @@ $(document).ready(function () {
       url: "/api/editMacros",
       method: "POST",
       data: macros
-    }).then(function (data) {
+    }).then(function(data) {
       window.location.replace(data.url);
       return showModal("Oops!", data.message);
     });
   });
-
 });

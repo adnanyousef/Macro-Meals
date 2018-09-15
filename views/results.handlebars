@@ -3,38 +3,42 @@
         <span id=home></span>
         <div class="card" id="perMealBreakdown">
             <div class="card-body">
-                <span style="font-size: 2.8rem; line-height: .9;">Recipes</span><span> (Based on
+                <span id="smallTitle" style="font-size: 2.8rem; line-height: .9;">Recipes</span><span id="smallHead">
+                    (Based on
                     {{suggested.mealCount}}
                     meals per day-
                     recommended nutrition per
                     meal)</span>
                 <hr style="margin-bottom: 0;">
                 <div class="text-black">
-                    {{!-- <h6>Based on {{suggested.mealCount}} meals per day- recommended nutrition per meal:</h6> --}}
                     <div class="row" style="line-height: 1;">
-                        <div class=" card summary">
-                            <span class="yellow_circle_result">
-                                <p class="circle-text-result">{{suggested.calsPerMeal}}</p>
-                            </span>
-                            <div class="card-text text-center">Calories</div>
+                        <div class="resultbox">
+                            <div class=" card summaryresult">
+                                <span class="yellow_circle_result">
+                                    <p class="circle-text-result">{{suggested.calsPerMeal}}</p>
+                                </span>
+                                <div class="card-text text-center">Calories</div>
+                            </div>
+                            <div class="card summaryresult">
+                                <span class="green_circle_result">
+                                    <p class="circle-text-result">{{suggested.proteinPerMeal}}g</p>
+                                </span>
+                                <div class="card-text text-center">Protein</div>
+                            </div>
                         </div>
-                        <div class="card summary">
-                            <span class="green_circle_result">
-                                <p class="circle-text-result">{{suggested.proteinPerMeal}}g</p>
-                            </span>
-                            <div class="card-text text-center">Protein</div>
-                        </div>
-                        <div class="card summary">
-                            <span class="blue_circle_result">
-                                <p class="circle-text-result">{{suggested.carbsPerMeal}}g</p>
-                            </span>
-                            <div class="card-text text-center">Carbs</div>
-                        </div>
-                        <div class="card summary">
-                            <span class="red_circle_result">
-                                <p class="circle-text-result">{{suggested.fatsPerMeal}}g</p>
-                            </span>
-                            <div class="card-text text-center">Fat</div>
+                        <div class="resultbox">
+                            <div class="card summaryresult">
+                                <span class="blue_circle_result">
+                                    <p class="circle-text-result">{{suggested.carbsPerMeal}}g</p>
+                                </span>
+                                <div class="card-text text-center">Carbs</div>
+                            </div>
+                            <div class="card summaryresult">
+                                <span class="red_circle_result">
+                                    <p class="circle-text-result">{{suggested.fatsPerMeal}}g</p>
+                                </span>
+                                <div class="card-text text-center">Fat</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -56,10 +60,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" id="photoCol">
                         <img src="{{this.pic}}" class="img-fluid" style="width: auto; height: 207;">
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-6" id="nutritionCol">
                         <div class="userinfo">
                             <h5>Nutrition Profile (per serving)</h5>
                             <div class="recipe-nutrition mt-2" data-serves="{{this.serves}}" id="list-{{this.id}}">

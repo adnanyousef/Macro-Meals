@@ -18,7 +18,7 @@
         crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
-    <title>Macro + Meals</title>
+    <title>Macros + Meals</title>
 </head>
 
 <body>
@@ -33,7 +33,6 @@
                         <div class="form-group" id="fitness-goal">
                             <label for="goal">I want to:</label>
                             <select class="form-control" id="goal">
-                                <option></option>
                                 <option class="goal" id="bf-goal" value="1">Lose Body Fat</option>
                                 <option class="goal" id="gm-goal" value="2">Gain Muscle</option>
                                 <option class="goal" id="mw-goal" value="3">Maintain weight</option>
@@ -42,7 +41,6 @@
                         <div class="form-group" id="pa-factor">
                             <label for="activity">I exercise:</label>
                             <select class="form-control" id="goal">
-                                <option></option>
                                 <option name="pa" class="pa" value="1" data-multiplier="1.2">0 days a week</option>
                                 <option name="pa" class="pa" value="2" data-multiplier="1.375">1-2 days a week</option>
                                 <option name="pa" class="pa" value="3" data-multiplier="1.55">3-4 days a week</option>
@@ -53,7 +51,7 @@
                         </div>
 
                         <div class="personal-info">
-                            <span><input placeholder="Age" id="age" oninput="this.className = ''" style=""></span>
+                            <span><input placeholder="Age" id="age" oninput="this.className = ''"></span>
                             <span><input id="weight" placeholder="Weight - lbs" oninput="this.className = ''" style="width: 24%;"></span>
 
                             <span><input id="feet" placeholder="Height - ft" oninput="this.className = ''" style="width: 24%;"></span>
@@ -69,6 +67,27 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Oops!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <!-- Intentionally left blank -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>

@@ -246,7 +246,7 @@ input.invalid {
   padding: 5px 15px;
   font-size: 18px;
   cursor: pointer;
-  margin: 10px 0;
+  margin-bottom: 15px;
 }
 #nextBtn:hover {
   background-color: #4caf50;
@@ -483,6 +483,17 @@ input.invalid {
   background: none;
   margin: 0px auto;
 }
+.card.summaryresult {
+  border: none;
+  background: none;
+  margin: 0px auto;
+}
+.circlebox {
+  display: inline-flex;
+}
+.resultbox {
+  display: inline-flex;
+}
 #nutrition-block button {
   background: none;
   border: 2px solid #4caf50;
@@ -510,7 +521,7 @@ input.invalid {
 #favorites-block li {
   margin: 15px;
   border: 2px solid #4caf50;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.3);
 }
 #favorites-block .card-header {
   letter-spacing: 2px;
@@ -655,7 +666,7 @@ input.invalid {
   color: #000000;
 }
 #insert-results-here .card-header {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
 }
 #insert-results-here .card-header h3 {
   color: black;
@@ -672,7 +683,7 @@ input.invalid {
   text-decoration: underline;
 }
 #insert-results-here .userinfo {
-  padding: 28px 0 0 92px;
+  padding: 21px 0 0 92px;
 }
 .recipe-nutrition {
   line-height: 1.2em;
@@ -699,9 +710,6 @@ input.invalid {
   color: #000000;
 }
 #insert-results-here a:hover {
-  color: #44ccaa;
-}
-#insert-results-here a:visited {
   color: #44ccaa;
 }
 #perMealBreakdown {
@@ -776,3 +784,450 @@ input.invalid {
   line-height: 83px;
   font-size: 24px;
 }
+.resultbox {
+  margin: 0 auto;
+}
+.card.summaryresult {
+  margin: 0px 40px;
+}
+/*===============  Media Queries ================*/
+
+/* Very Large Devices, Wide Screens */
+@media only screen and (max-width: 1300px) {
+  .card.summaryresult {
+    margin: 0px 25px;
+  }
+}
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  #regForm {
+    width: 70%;
+  }
+  #profphoto {
+    height: auto !important;
+  }
+  .yellow_circle {
+    border: 4px solid #fdfd2c;
+    border-radius: 50%;
+    height: 87px;
+    width: 95px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .green_circle {
+    border: 4px solid #97cb04;
+    border-radius: 50%;
+    height: 87px;
+    width: 95px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .blue_circle {
+    border: 4px solid #297ba2;
+    border-radius: 50%;
+    height: 87px;
+    width: 95px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .red_circle {
+    border: 4px solid #f74847;
+    border-radius: 50%;
+    height: 87px;
+    width: 95px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .circle-text {
+    text-align: center;
+    line-height: 83px;
+    font-size: 24px;
+  }
+  #nutrition-block button {
+    padding: 3px;
+    font-size: 15px;
+  }
+  .circlebox {
+    margin: 0 auto;
+  }
+  .card.summary {
+    margin: 0px 7px;
+  }
+  #nutrition-block .row {
+    margin: 22px 0px 11px 0px;
+  }
+  .card.summaryresult {
+    margin: 0px 25px;
+  }
+  .yellow_circle_result {
+    border: 4px solid #fdfd2c;
+    border-radius: 50%;
+    height: 70px;
+    width: 74px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .green_circle_result {
+    border: 4px solid #97cb04;
+    border-radius: 50%;
+    height: 70px;
+    width: 74px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .blue_circle_result {
+    border: 4px solid #297ba2;
+    border-radius: 50%;
+    height: 70px;
+    width: 74px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .red_circle_result {
+    border: 4px solid #f74847;
+    border-radius: 50%;
+    height: 70px;
+    width: 74px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .circle-text-result {
+    text-align: center;
+    line-height: 67px;
+    font-size: 18px;
+  }
+  #insert-results-here .card-header h3 {
+    font-size: 1.5rem;
+  }
+  #insert-results-here .userinfo {
+    padding: 15px 0 0 87px;
+  }
+  #insert-results-here h5 {
+    font-size: 1rem;
+  }
+  .userinfo p {
+    line-height: 0.9em;
+    font-size: 0.9rem !important;
+  }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .login-block .row {
+    height: 357px;
+  }
+  .login-sec {
+    padding: 12px 10px 10px 25px;
+  }
+  .btn-submit {
+    padding: 3px;
+    font-size: 12px;
+  }
+  .banner-text h1 {
+    font-size: 3.5rem;
+  }
+  .banner-text p {
+    font-size: 1rem;
+  }
+  .login-sec label {
+    font-size: 0.9rem;
+  }
+  .login-sec h2 {
+    margin-bottom: 15px;
+  }
+  .login-sec input {
+    font-size: 1rem;
+  }
+  .newAccount {
+    margin: 2px;
+    font-size: 0.7rem;
+    position: absolute;
+    bottom: 12px;
+  }
+  #personal-info-tab #feet {
+    margin-right: 0px;
+  }
+  .yellow_circle {
+    border: 4px solid #fdfd2c;
+    border-radius: 50%;
+    height: 70px;
+    width: 74px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .green_circle {
+    border: 4px solid #97cb04;
+    border-radius: 50%;
+    height: 70px;
+    width: 74px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .blue_circle {
+    border: 4px solid #297ba2;
+    border-radius: 50%;
+    height: 70px;
+    width: 74px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .red_circle {
+    border: 4px solid #f74847;
+    border-radius: 50%;
+    height: 70px;
+    width: 74px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .circle-text {
+    text-align: center;
+    line-height: 67px;
+    font-size: 18px;
+  }
+  .card.summary {
+    margin: 0px -2px;
+  }
+  #nutrition-block h3 {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+  #nutrition-card {
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  #nutrition-block .row {
+    margin: 2px 0px -5px 0px;
+  }
+  #favorites-block .card-header {
+    font-size: 1.2rem;
+  }
+  #searchblock h3 {
+    font-size: 1.2rem;
+  }
+  #welcome-back-box {
+    margin: 10px;
+    font-size: 0.8rem;
+  }
+  .card.summaryresult {
+    margin: 0px 10px;
+  }
+  #photoCol {
+    text-align: center;
+  }
+  #nutritionCol {
+    text-align: center;
+  }
+  #insert-results-here h5 {
+    font-size: 1.2rem;
+  }
+  .userinfo p {
+    font-size: 1rem !important;
+  }
+  #insert-results-here .userinfo {
+    padding: 20px 0 0 30px;
+  }
+  #favImg {
+    text-align: center;
+  }
+  .back-to-profile {
+    margin-top: 10px;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  .login-block .row {
+    height: auto;
+  }
+  .wrapper {
+    box-shadow: none;
+    padding: 56px;
+    margin: 10px;
+  }
+  .login-sec {
+    padding: 0px;
+  }
+  #regForm {
+    padding: 20px;
+    width: 90%;
+  }
+  .container {
+    margin-bottom: 100%;
+  }
+  .login-block {
+    margin-bottom: 100%;
+  }
+  .circle-text {
+    text-align: center;
+    line-height: 134px;
+    font-size: 25px;
+  }
+  .yellow_circle {
+    border: 4px solid #fdfd2c;
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+    margin: 10px 8px;
+    position: relative;
+    text-align: center;
+  }
+  .green_circle {
+    border: 4px solid #97cb04;
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+    margin: 10px 8px;
+    position: relative;
+    text-align: center;
+  }
+  .blue_circle {
+    border: 4px solid #297ba2;
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+    margin: 10px 8px;
+    position: relative;
+    text-align: center;
+  }
+  .red_circle {
+    border: 4px solid #f74847;
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+    margin: 10px 8px;
+    position: relative;
+    text-align: center;
+  }
+  #favorites-block {
+    margin-bottom: 1.5rem;
+  }
+  #welcome-back-box {
+    margin-bottom: 34px;
+  }
+  .card.summaryresult {
+    margin: 0px 2px;
+  }
+  #insert-results-here .userinfo {
+    padding: 20px 0 0 10px;
+  }
+  #perMealBreakdown .text-black {
+    margin-bottom: 10px;
+  }
+  #insert-results-here .card-header h3 {
+    font-size: 1.2rem;
+    line-height: 1.1;
+  }
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  .wrapper {
+    box-shadow: none;
+    padding: 40px;
+    margin: 10px;
+  }
+  .form-info h3 {
+    font-size: 1.25rem;
+  }
+  .form-info span {
+    font-size: 0.8rem;
+  }
+  .tab p {
+    margin: 28px 0;
+  }
+  .login {
+    font-size: 0.8rem;
+  }
+  #nextBtn {
+    font-size: 14px;
+  }
+  #insert-results-here .userinfo {
+    padding: 20px 0 0 2px;
+  }
+  #insert-results-here h5 {
+    font-size: 1rem;
+  }
+  .userinfo p {
+    font-size: 0.8rem !important;
+  }
+  #results-block {
+    width: 90% !important;
+  }
+  #results-block .card-body {
+    padding: 0.5rem;
+  }
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 370px) {
+  .wrapper {
+    padding: 28px;
+  }
+  #nextBtn {
+    font-size: 12px;
+    padding: 3px 10px;
+  }
+  .yellow_circle {
+    border: 4px solid #fdfd2c;
+    border-radius: 50%;
+    height: 78px;
+    width: 80px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .green_circle {
+    border: 4px solid #97cb04;
+    border-radius: 50%;
+    height: 78px;
+    width: 80px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .blue_circle {
+    border: 4px solid #297ba2;
+    border-radius: 50%;
+    height: 78px;
+    width: 80px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .red_circle {
+    border: 4px solid #f74847;
+    border-radius: 50%;
+    height: 78px;
+    width: 80px;
+    margin: 10px 15px;
+    position: relative;
+    text-align: center;
+  }
+  .circle-text {
+    text-align: center;
+    line-height: 75px;
+    font-size: 18px;
+  }
+  #insert-results-here .userinfo {
+    padding: 20px 0 0 2px;
+  }
+  #results-block .card-body {
+    padding: 0.2rem;
+  }
+  #perMealBreakdown #smallTitle {
+    font-size: 1.5rem !important;
+  }
+  #perMealBreakdown #smallHead {
+    font-size: 0.8rem !important;
+  }
+}
+
+/*================================================*/

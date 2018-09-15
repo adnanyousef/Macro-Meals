@@ -27,33 +27,39 @@
         <!-- Nutrition Breakdown -->
         <div class="col-md-8">
             <div class="card my-4" id="nutrition-block">
-                <div class="card-body">
+                <div class="card-body" id="nutrition-card">
                     <h3 class="card-title">Nutrition Breakdown</h3>
                     <div class="row">
-                        <div class="card summary">
-                            <span class="yellow_circle">
-                                <p class="circle-text">{{data.recCals}}</p>
-                            </span>
-                            <div class="card-text text-center">Calories</div>
+                        <div class="circlebox">
+                            <div class="card summary">
+                                <span class="yellow_circle">
+                                    <p class="circle-text">{{data.recCals}}</p>
+                                </span>
+                                <div class="card-text text-center">Calories</div>
+                            </div>
+                            <div class="card summary">
+                                <span class="green_circle">
+                                    <p class="circle-text">{{data.protein}}g</p>
+                                </span>
+                                <div class="card-text text-center">Protein</div>
+                            </div>
                         </div>
-                        <div class="card summary">
-                            <span class="green_circle">
-                                <p class="circle-text">{{data.protein}}g</p>
-                            </span>
-                            <div class="card-text text-center">Protein</div>
+                        <div class="circlebox">
+                            <div class="card summary">
+                                <span class="blue_circle">
+                                    <p class="circle-text ">{{data.carbs}}g</p>
+                                </span>
+                                <div class="card-text text-center">Carbs</div>
+                            </div>
+                            <div class="card summary">
+                                <span class="red_circle">
+                                    <p class="circle-text">{{data.fats}}g</p>
+                                </span>
+                                <div class="card-text text-center">Fat</div>
+                            </div>
                         </div>
-                        <div class="card summary">
-                            <span class="blue_circle">
-                                <p class="circle-text ">{{data.carbs}}g</p>
-                            </span>
-                            <div class="card-text text-center">Carbs</div>
-                        </div>
-                        <div class="card summary">
-                            <span class="red_circle">
-                                <p class="circle-text">{{data.fats}}g</p>
-                            </span>
-                            <div class="card-text text-center">Fat</div>
-                        </div>
+
+
                     </div>
                     <a href="/updateMacros"><button class="float-right">Update Macros</button></a>
                 </div>
@@ -76,7 +82,7 @@
                             {{#each favs}}
                             <li>
                                 <div class="row">
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-4" id="favImg">
                                         <img src="{{this.pic}}" class="img-fluid" style="width: 200px; height: auto;">
                                     </div>
                                     <div class="col-lg-6 text-center">
